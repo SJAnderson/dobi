@@ -318,6 +318,7 @@ switch command
           config.developers = {}
           config.developers[user.admin_uid] = 'admin'
           config = CSON.stringifySync(config).replace /\n\n/g, '\n'
+          config = CSON.stringifySync(config).replace /"/g, '\''
           fs.writeFileSync config_path, config
 
           # done
