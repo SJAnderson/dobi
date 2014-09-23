@@ -390,7 +390,7 @@ switch command
       log 'CACHE:WARM STATS'
       log "SITES LOADED: #{sites_parsed}"
       log "SCRIPTS LOADED: #{scripts_loaded}"
-      if errors
+      if errors.length > 0
         log "SCRIPT ERRORS: #{errors.length}".red
       else
         log 'SCRIPT ERRORS: 0'
